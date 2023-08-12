@@ -36,7 +36,7 @@ func isDark() bool {
 	}
 	defer k.Close()
 
-	useLight, _, err := k.GetIntegerValue("AppsUseLightTheme")
+	useLight, _, err := k.GetIntegerValue("SystemUsesLightTheme")
 	if err != nil { // older version of Windows will not have this value
 		return false
 	}
